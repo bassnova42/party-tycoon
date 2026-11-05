@@ -1129,7 +1129,7 @@ function showSetup() {
       <div class="modal setup">
         <div class="setup-top">
           <span class="globe big"></span>
-          <div><h1>环球大富翁</h1><p class="sub">一台电脑轮流玩 · ${DURATION_MIN} 分钟一局 · 每人起始资金 ${money(START_CASH)}</p></div>
+          <div><h1>客厅大富翁</h1><p class="sub">一台电脑轮流玩 · ${DURATION_MIN} 分钟一局 · 每人起始资金 ${money(START_CASH)}</p></div>
         </div>
         <div class="field-label">几个人玩</div>
         <div class="chips">${[2, 3, 4, 5, 6].map(n => `<button class="chip ${n === st.count ? 'on' : ''}" data-count="${n}">${n} 人</button>`).join('')}</div>
@@ -1495,7 +1495,7 @@ async function showPartyLobby() {
           <p class="pq-tip">手机和这台电脑连同一个 Wi-Fi，打开相机扫码</p>
         </div>
         <div class="party-side">
-          <div class="setup-top"><span class="globe big"></span><div><h1>环球大富翁</h1><p class="sub">扫码进房 · 手机上选角色 · ${DURATION_MIN} 分钟一局 · 起始资金 ${money(START_CASH)}</p></div></div>
+          <div class="setup-top"><span class="globe big"></span><div><h1>客厅大富翁</h1><p class="sub">扫码进房 · 手机上选角色 · ${DURATION_MIN} 分钟一局 · 起始资金 ${money(START_CASH)}</p></div></div>
           <div class="field-label">玩家 <span id="pCount"></span></div>
           <div class="pseats" id="pSeats"></div>
           <div class="btns"><button class="btn gold big" id="partyStart" disabled>开局</button></div>

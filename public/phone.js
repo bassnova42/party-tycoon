@@ -100,7 +100,7 @@ function notice(face, title, sub) {
 function header(r) {
   const offline = S.ws?.readyState !== 1;
   return `<header class="top">
-    <span class="globe"></span><b>环球大富翁</b>
+    <span class="globe"></span><b>客厅大富翁</b>
     <span class="room">房间 ${esc(r.code)}${offline ? ' · <em>重连中</em>' : ''}</span>
   </header>`;
 }

@@ -83,7 +83,7 @@ function avatarColor(name) {
 function renderLogin() {
   $app.innerHTML = `
     <section class="card login">
-      <h1>环球大富翁</h1>
+      <h1>客厅大富翁</h1>
       <p class="sub">掷骰子绕地球跑圈，买下国家盖房子，别人踩到就交过路费。</p>
       ${S.pendingCode ? `<p class="note">登录后自动加入邀请码 <b>${S.pendingCode}</b> 的桌子</p>` : ''}
       <form id="loginForm">
@@ -396,7 +396,7 @@ function renderGame() {
         <div class="board">
           ${SQUARES.map(sq => renderCell(g, sq)).join('')}
           <div class="center">
-            <div class="center-title">环球大富翁</div>
+            <div class="center-title">客厅大富翁</div>
             ${dice}
             <div class="phase ${myTurn ? 'mine' : ''}">${phaseText(g, me, cur)}</div>
             ${g.status === 'playing' ? `<div class="timer ${left <= 10 ? 'low' : ''}" id="timer">${left}s</div>` : ''}

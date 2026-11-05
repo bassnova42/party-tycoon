@@ -13,7 +13,7 @@ const srv = spawn(process.execPath, [fileURLToPath(new URL('../server.js', impor
   stdio: ['ignore', 'pipe', 'inherit'],
 });
 await new Promise((res, rej) => {
-  srv.stdout.on('data', (d) => { if (String(d).includes('环球大富翁')) res(); });
+  srv.stdout.on('data', (d) => { if (String(d).includes('客厅大富翁')) res(); });
   srv.on('exit', (code) => rej(new Error(`服务器退出 ${code}`)));
 });
 const quit = (code) => { srv.kill(); process.exit(code); };

@@ -341,7 +341,7 @@ wss.on('connection', (ws, req) => {
 // 监听所有网卡，同一个 Wi-Fi 下的手机才能连上
 server.listen(PORT, '0.0.0.0', () => {
   party.setPort(PORT);
-  console.log(`环球大富翁 http://localhost:${PORT}`);
+  console.log(`客厅大富翁 http://localhost:${PORT}`);
   console.log(`聚会模式大屏 http://localhost:${PORT}/party · 手机连 ${party.joinBase()}`);
   warmCards(CARDS);
 });
