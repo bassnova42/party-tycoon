@@ -945,7 +945,8 @@ function renderActions() {
   const cur = current(s);
   info.innerHTML = `${avatar(cur)}<b>${esc(cur.name)} 的回合</b>`;
   if (G.busy) { box.innerHTML = ''; return; }
-  if (PARTY) { box.innerHTML = statusCard(s, cur); return; }
+  // 有地在卖时，中间让给出售卡
+  if (PARTY) { box.innerHTML = s.offer ? '' : statusCard(s, cur); return; }
   if (G.viewer !== cur.id) {
     box.innerHTML = `<p class="hint">你现在是 ${esc(player(s, G.viewer).name)}，还没轮到你</p>
       <button class="btn gold big" data-do="view" data-pid="${cur.id}">切换到 ${esc(cur.name)}</button>`;
