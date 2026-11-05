@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>环球大富翁</title>
+  <link rel="stylesheet" href="/play.css">
+</head>
+<body>
+  <header class="bar" id="bar">
+    <div class="logo"><span class="globe"></span><span>环球大富翁</span></div>
+    <div class="clock" id="clock"></div>
+    <nav class="ptabs" id="tabs"></nav>
+    <div class="toggles" id="toggles"></div>
+    <button class="ghost" id="newGame" title="新游戏">新游戏</button>
+  </header>
+
+  <main class="stage">
+    <section class="board-area" id="boardArea">
+      <div class="board" id="board">
+        <div class="center" id="center">
+          <div class="center-deco">
+            <div class="pile pile-chance"><span>?</span>机会</div>
+            <div class="pile pile-fate"><span>!</span>命运</div>
+          </div>
+          <div class="center-main">
+            <div class="turn-info" id="turnInfo"></div>
+            <div class="dice" id="dice">
+              <div class="die3d"><div class="cube" id="die0"></div></div>
+              <div class="die3d"><div class="cube" id="die1"></div></div>
+            </div>
+            <div class="actions" id="actions"></div>
+          </div>
+        </div>
+        <div class="tokens" id="tokens"></div>
+      </div>
+    </section>
+
+    <aside class="side">
+      <section class="panel bank" id="bank"></section>
+      <section class="panel deed" id="deed"></section>
+      <details class="panel log" id="logBox">
+        <summary>对局记录</summary>
+        <ol id="log"></ol>
+      </details>
+    </aside>
+  </main>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="prompt" id="prompt"></div>
+  <div class="cardlayer" id="cardLayer"></div>
+  <div class="banner" id="banner"></div>
+  <div class="toast" id="toast"></div>
+  <div class="fx" id="fx"></div>
+
+  <script type="module" src="/play.js"></script>
+</body>
+</html>
